@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalle del Artículo</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #121212;
+      color: #ddd;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #202020;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+    }
+
+    header .logo {
+      font-size: 1.2em;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .article-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .left-panel {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .right-panel {
+      flex: 1;
+      min-width: 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .video-frame {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 8px;
+      margin: 1rem 0;
+      background-color: #1e1e1e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bbb;
+      font-style: italic;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .btn {
+      background-color: #0078d7;
+      color: white;
+      padding: 0.8rem;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      width: 100%;
+      display: inline-block;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #005a9e;
+    }
+
+    .requisitos {
+      background: #1c1c1c;
+      color: #ddd;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 1rem;
+      font-size: 0.9em;
+      line-height: 1.5;
+    }
+
+    h1, h2 {
+      margin-bottom: 0.5rem;
+      text-align: left;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin: 1rem 2rem;
+      text-decoration: none;
+      color: #0078d7;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #1e1e1e;
+      color: #ffffff;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">📊 Portal de Herramientas</div>
+    <nav>
+      <a href="index.html" class="active">Inicio</a>
+      <a href="#">Quienes Somos</a>
+      <a href="#">Nuestros Clientes</a>
+      <a href="#">Nuestros Servicios</a>
+      <a href="#">Contacto</a>
+      <a href="login.html" class="login-btn">Cerrar Sesión</a>
+    </nav>
+  </header>
+
+  <a href="index.html" class="back-btn">← Volver</a>
+
+  <main class="article-container">
+    <!-- Panel Izquierdo -->
+    <div class="left-panel">
+      <h1 id="titulo">Título del Artículo</h1>
+      <p id="resumen"><h2>RESUMEN:</h2>
+      </strong> Aquí va un resumen y descripción del contenido.</p>
+
+      <!-- Ventana de video / Google Drive -->
+      <div id="video-container" class="video-frame">
+        Contenido audiovisual aún no disponible
+      </div>
+
+      <!-- resumen detallada -->
+      <h2>DESCRIPCIÓN</h2>
+      <p id="descripcion">Aquí se desarrolla la explicación completa del recurso, sus funciones principales y modo de uso.</p>
+    </div>
+
+    <!-- Panel Derecho -->
+    <div class="right-panel">
+      <a id="excel-link" href="#" class="btn" download>📘 Descargar Excel</a>
+      <a id="pdf-link" href="#" target="_blank" class="btn" download>📕 Descargar Manual PDF</a>
+
+      <div class="requisitos">
+        <strong>Requisitos básicos para la ejecución de los programas:</strong><br>
+        • Programas: Excel 2016 (o más reciente).<br>
+        • Sistema operativo: Windows 7 (o más reciente) o macOS Catalina (o más reciente).<br>
+        • Procesador: Intel Core i3 o Ryzen 3 (o superiores).
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Portal de Herramientas</p>
+  </footer>
+
+  <!-- Script con toda la base de datos de artículos -->
+  <script>
+const articulos = {
+  1: {
+    titulo: "Índices & Ratios",
+    resumen: "Herramienta para analizar indicadores financieros clave de manera automática y visual.",
+    descripcion: `
+      Este sistema permite calcular de forma automática los principales índices financieros y ratios contables, facilitando la interpretación de la situación económica y patrimonial de la empresa. 
+      <br><br>
+      Está diseñado para usuarios que no poseen formación contable avanzada, ya que explica cada indicador y muestra resultados visuales para una comprensión rápida. 
+      <br><br>
+      Los índices de liquidez, rentabilidad, endeudamiento y gestión se calculan a partir de los datos contables cargados por el usuario. Esto permite detectar alertas tempranas, puntos críticos de la empresa y áreas de mejora. 
+      <br><br>
+      De esta manera, el usuario obtiene un diagnóstico integral de su negocio y una guía práctica para tomar decisiones informadas basadas en evidencia contable sólida.
+    `,
+    excel: "archivos/Índices & Ratios.xlsx",
+    pdf: "archivos/Índices & Ratios.pdf",
+  },
+
+  2: {
+    titulo: "Calculador de Punto de Equilibrio (6 Productos)",
+    resumen: "Calcula el nivel de ventas necesario para cubrir costos totales en hasta seis productos simultáneamente.",
+    descripcion: `
+      Esta herramienta está diseñada para empresas que trabajan con múltiples líneas de producto. 
+      <br><br>
+      Permite determinar el punto de equilibrio individual y combinado, considerando costos fijos, variables y márgenes de contribución. 
+      <br><br>
+      El sistema entrega gráficos y alertas visuales, mostrando la relación entre ingresos, costos y utilidades, ayudando a identificar el nivel mínimo de ventas necesario para evitar pérdidas. 
+      <br><br>
+      Además, incluye explicaciones claras de cada concepto, por lo que no requiere conocimientos avanzados en finanzas o contabilidad.
+    `,
+    excel: "archivos/Calculador de Punto de Equilibrio (6 Productos).xlsx",
+    pdf: "archivos/Calculador de Punto de Equilibrio (6 Productos).pdf",
+  },
+
+  3: {
+    titulo: "Calculador de Intereses",
+    resumen: "Herramienta para calcular intereses simples, compuestos y períodos equivalentes.",
+    descripcion: `
+      Con este archivo, el usuario puede realizar cálculos financieros de manera precisa y rápida. 
+      <br><br>
+      Permite determinar montos futuros, valores presentes, tasas equivalentes y plazos bajo diferentes esquemas de capitalización. 
+      <br><br>
+      Es ideal para estudiantes, contadores, empresarios o cualquier persona que necesite analizar operaciones financieras o renegociar deudas. 
+      <br><br>
+      Además, incluye fórmulas explicativas y gráficos automáticos para interpretar resultados sin errores.
+    `,
+    excel: "archivos/Calculador de Intereses.xlsx",
+    pdf: "archivos/Calculador de Intereses.pdf",
+  },
+
+  4: {
+    titulo: "Control de Stock",
+    resumen: "Sistema automatizado para registrar, controlar y analizar movimientos de inventario.",
+    descripcion: `
+      Este sistema permite llevar un control integral del inventario, registrando entradas, salidas y existencias actuales. 
+      <br><br>
+      Genera reportes automáticos de rotación, alertas de stock mínimo y gráficos de evolución. 
+      <br><br>
+      Es una herramienta muy útil para empresas que deseen profesionalizar su gestión logística y reducir pérdidas por exceso o falta de stock. 
+      <br><br>
+      Todo se maneja desde una interfaz intuitiva en Excel, sin necesidad de programación adicional.
+    `,
+    excel: "archivos/Control de Stock.xlsm",
+    pdf: "archivos/Control de Stock.pdf",
+  },
+
+  5: {
+    titulo: "Rutas Críticas - CPM - Diagrama de Gantt",
+    resumen: "Analiza proyectos y cronogramas mediante la técnica del camino crítico.",
+    descripcion: `
+      Esta planilla permite planificar y controlar proyectos, identificando tareas críticas y no críticas mediante el método CPM (Critical Path Method). 
+      <br><br>
+      Además, genera un diagrama de Gantt automático para visualizar la programación temporal. 
+      <br><br>
+      Es ideal para estudiantes de administración, ingeniería o gestores de proyectos que buscan controlar tiempos, dependencias y holguras. 
+      <br><br>
+      Incluye instrucciones detalladas y ejemplos listos para usar.
+    `,
+    excel: "archivos/Rutas Críticas - CPM - Diagrama de Gantt.xlsm",
+    pdf: "archivos/Rutas Críticas - CPM - Diagrama de Gantt.pdf",
+  },
+
+  6: {
+    titulo: "EVA y EBITDA",
+    resumen: "Calcula indicadores de valor económico agregado y desempeño operativo.",
+    descripcion: `
+      Esta plantilla permite calcular el EVA (Economic Value Added) y el EBITDA (Beneficio antes de intereses, impuestos, depreciación y amortización). 
+      <br><br>
+      Ambos indicadores son esenciales para medir la rentabilidad y eficiencia de una empresa. 
+      <br><br>
+      El sistema guía al usuario paso a paso, explicando los componentes de cada cálculo y generando reportes comparativos. 
+      <br><br>
+      Ideal para evaluaciones de desempeño financiero o toma de decisiones estratégicas.
+    `,
+    excel: "archivos/EVA y EBIDTA.xlsx",
+    pdf: "archivos/EVA y EBIDTA.pdf",
+  },
+
+  7: {
+    titulo: "Calculador de Vogel",
+    resumen: "Aplica el método de Vogel para optimizar costos de transporte en logística.",
+    descripcion: `
+      Este archivo implementa el método de aproximación de Vogel, una técnica de programación lineal utilizada para resolver problemas de transporte. 
+      <br><br>
+      Permite asignar rutas y costos de manera eficiente, reduciendo gastos logísticos. 
+      <br><br>
+      Ideal para estudiantes y profesionales de logística, economía o ingeniería industrial. 
+      <br><br>
+      Su interfaz clara permite comprender paso a paso cómo se determina la solución inicial y la optimización de rutas.
+    `,
+    excel: "archivos/Calculador de Vogel.xlsm",
+    pdf: "archivos/Calculador de Vogel.pdf",
+  },
+
+  8: {
+    titulo: "Modelos de Líneas de Espera",
+    resumen: "Simula colas y tiempos de espera en sistemas de atención al cliente.",
+    descripcion: `
+      Este simulador aplica fórmulas de teoría de colas para analizar sistemas de espera. 
+      <br><br>
+      Permite calcular número promedio de clientes en cola, tiempo de servicio y eficiencia. 
+      <br><br>
+      Es ideal para optimizar recursos humanos y tecnológicos en áreas de atención, logística o servicios. 
+      <br><br>
+      Incluye ejemplos y resultados gráficos fáciles de interpretar.
+    `,
+    excel: "archivos/Modelos de Lineas de Espera.xlsx",
+    pdf: "archivos/Modelos de Lineas de Espera.pdf",
+  },
+
+  9: {
+    titulo: "Plantilla para DJ Ganancias",
+    resumen: "Modelo base adaptable a distintas actividades económicas para llegar al resultado neto de Ganancias.",
+    descripcion: `
+      Esta plantilla sirve para realizar un cálculo impositivo de la Declaración Jurada Anual de Ganancias para Personas Físicas. 
+      <br><br>
+      Incluye estructuras predefinidas para balances, proyecciones, presupuestos y análisis de costos. 
+      <br><br>
+      Es ideal para docentes, alumnos o profesionales que deseen crear sus propios sistemas sin partir desde cero. 
+      <br><br>
+      Su formato ordenado y profesional facilita la comprensión y personalización.
+    `,
+    excel: "archivos/Plantilla para DJ Ganancias.xlsm",
+    pdf: "archivos/Plantilla para DJ Ganancias.pdf",
+  },
+
+  10: {
+    titulo: "Presupuestos",
+    resumen: "Desarrolla presupuestos anuales o mensuales con control automático.",
+    descripcion: `
+      Este archivo permite armar presupuestos por centro de costo, área o período, comparando valores reales vs. planificados. 
+      <br><br>
+      El sistema genera reportes automáticos de desviaciones y gráficos visuales de cumplimiento. 
+      <br><br>
+      Ideal para organizaciones que buscan profesionalizar su planificación financiera. 
+      <br><br>
+      Incluye estructura estándar y fórmulas automáticas para acelerar la carga.
+    `,
+    excel: "archivos/Presupuestos.xlsx",
+    pdf: "archivos/Presupuestos.pdf",
+  },
+
+  11: {
+    titulo: "Sistema Contable para Monotributistas",
+    resumen: "Versión mejorada con automatizaciones y módulos integrados.",
+    descripcion: `
+      Esta versión de la planilla base incluye módulos adicionales para análisis financiero, carga dinámica y reportes automáticos. 
+      <br><br>
+      Está pensada como herramienta multipropósito, adaptable a distintos sectores. 
+      <br><br>
+      Incluye instrucciones paso a paso, ejemplos y panel de control visual para facilitar su uso. 
+      <br><br>
+      Es una excelente opción para quienes buscan centralizar múltiples cálculos en un solo archivo.
+    `,
+    excel: "archivos/Sistema Contable para Monotributistas.xlsm",
+    pdf: "archivos/Sistema Contable para Monotributistas.pdf",
+  },
+
+  12: {
+    titulo: "SISTEMA CONTABLE V Especial Ganancias",
+    resumen: "Sistema automatizado para registrar operaciones y calcular impuesto a las ganancias.",
+    descripcion: `
+      Esta herramienta está especialmente diseñada para contadores o estudiantes avanzados. 
+      <br><br>
+      Permite registrar operaciones contables, generar balances y calcular automáticamente el impuesto a las ganancias. 
+      <br><br>
+      Su estructura está alineada a normativas locales, facilitando el cumplimiento fiscal. 
+      <br><br>
+      Incluye reportes y módulos auxiliares para análisis de resultados.
+    `,
+    excel: "archivos/SISTEMA CONTABLE V Especial Ganancias.xlsm",
+    pdf: "archivos/SISTEMA CONTABLE V Especial Ganancias.pdf",
+  },
+
+  13: {
+    titulo: "Sistema de Honorarios 1.7",
+    resumen: "Calcula honorarios profesionales según diferentes parámetros y tarifas.",
+    descripcion: `
+      Este sistema está pensado para profesionales independientes que necesitan estimar y registrar sus honorarios. 
+      <br><br>
+      Permite calcular importes según tiempo, valor hora, tipo de servicio o tarifa fija. 
+      <br><br>
+      Además, genera reportes automáticos para control y facturación. 
+      <br><br>
+      Es sencillo de usar y adaptable a múltiples rubros.
+    `,
+    excel: "archivos/Sistema de Honorarios (Instalar).rar",
+    pdf: "archivos/Modo de Uso Sistema Honorarios.pdf",
+  },
+
+  14: {
+    titulo: "VAN y TIR",
+    resumen: "Calcula el Valor Actual Neto y la Tasa Interna de Retorno de proyectos de inversión.",
+    descripcion: `
+      Esta plantilla automatiza el cálculo de VAN y TIR, dos de los indicadores más utilizados en evaluación de proyectos. 
+      <br><br>
+      Permite ingresar flujos de caja, tasas de descuento y obtener resultados comparativos. 
+      <br><br>
+      Es ideal para estudiantes o empresas que evalúan alternativas de inversión. 
+      <br><br>
+      Incluye interpretación automática y gráficos de sensibilidad.
+    `,
+    excel: "archivos/VAN y TIR.xlsx",
+    pdf: "archivos/VAN y TIR.pdf",
+    video: "https://www.youtube.com/embed/qHAAxuRwyhY",
+  }
+};
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+const articulo = articulos[id];
+
+if (articulo) {
+  document.getElementById("titulo").innerText = articulo.titulo;
+  document.getElementById("resumen").innerHTML = "<strong>Resumen:</strong> " + articulo.resumen;
+  document.getElementById("descripcion").innerHTML = articulo.descripcion;
+  document.getElementById("excel-link").href = articulo.excel;
+  document.getElementById("pdf-link").href = articulo.pdf;
+}
+  </script>
+
+</body>
+</html>

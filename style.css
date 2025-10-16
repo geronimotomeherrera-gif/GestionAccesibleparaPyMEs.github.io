@@ -1,0 +1,227 @@
+/* === ESTILO GENERAL === */
+body {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  margin: 0;
+  background: #0e0e0e; /* Fondo principal más profundo */
+  color: #eaeaea; /* Texto claro */
+  line-height: 1.6;
+}
+
+/* === HEADER === */
+header {
+  background: linear-gradient(90deg, #111, #1e1e1e);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #2a2a2a;
+}
+
+header .logo {
+  font-size: 1.3em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+nav a {
+  color: #ccc;
+  margin: 0 12px;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+nav .active {
+  color: #00b4d8;
+  font-weight: 600;
+}
+
+.login-btn {
+  background: #00b4d8;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.login-btn:hover {
+  background: #0091b2;
+}
+
+/* === GRID PRINCIPAL (Index) === */
+main.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.video-item {
+  background: #1b1b1b;
+  border: 1px solid #2b2b2b;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  color: #eaeaea;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.video-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  border-color: #00b4d8;
+}
+
+.video-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.video-item h3 {
+  margin: 10px 0 0;
+  font-size: 1rem;
+  color: #f5f5f5;
+}
+
+/* === FOOTER === */
+footer {
+  background: #111;
+  color: #888;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  border-top: 1px solid #2a2a2a;
+}
+
+/* === ARTÍCULO === */
+.articulo-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  gap: 40px;
+  background: #0e0e0e;
+}
+
+.articulo-texto {
+  flex: 1;
+  min-width: 320px;
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.articulo-texto h1 {
+  color: #00b4d8;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.articulo-texto h2 {
+  margin-top: 25px;
+  color: #ddd;
+}
+
+.articulo-texto iframe {
+  width: 100%;
+  height: 220px;
+  border: none;
+  border-radius: 8px;
+  background: #0b0b0b;
+  margin: 20px 0;
+}
+
+.articulo-texto p {
+  color: #ccc;
+  margin-bottom: 14px;
+  text-align: justify;
+}
+
+/* Descargas */
+.articulo-descargas {
+  flex: 0 0 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.articulo-descargas a {
+  background: #00b4d8;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.articulo-descargas a:hover {
+  background: #0091b2;
+}
+
+/* === LOGIN === */
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 35px;
+  background: #1b1b1b;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  color: #f0f0f0;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00b4d8;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-container input {
+  padding: 12px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+}
+
+.login-container input::placeholder {
+  color: #777;
+}
+
+.login-container button {
+  padding: 12px;
+  background: #00b4d8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.login-container button:hover {
+  background: #0091b2;
+}
+
+.login-container .extras {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  color: #aaa;
+}

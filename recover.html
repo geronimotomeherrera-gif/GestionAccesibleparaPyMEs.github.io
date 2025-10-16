@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Recuperar Contraseña</title>
+  <style>
+    body { font-family: Arial; background: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    .recover-box {
+      background: white; padding: 30px; border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2); width: 320px; text-align: center;
+    }
+    h2 { margin-bottom: 20px; }
+    input { width: 100%; padding: 10px; margin: 8px 0; border: 1px solid #ccc; border-radius: 5px; }
+    button { width: 100%; padding: 10px; margin-top: 10px; background: #cc0000; color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
+    button:hover { background: #ff0000; }
+    a { display: block; margin-top: 10px; font-size: 14px; color: #333; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="recover-box">
+    <h2>Recuperar Contraseña</h2>
+    <form action="login.html" method="get">
+      <input type="email" placeholder="Correo registrado" required>
+      <button type="submit">Enviar enlace</button>
+    </form>
+    <a href="login.html">Volver al inicio de sesión</a>
+  </div>
+</body>
+</html>

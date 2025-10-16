@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Artículo 1</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #202020;
+      color: white;
+      padding: 15px;
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header a {
+      color: white;
+      text-decoration: none;
+      background: #cc0000;
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .container {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .left {
+      flex: 2;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      justify-content: center;
+      align-items: center;
+    }
+    .download-btn {
+      text-decoration: none;
+      background-color: #cc0000;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bold;
+      width: 160px;
+      transition: 0.3s;
+    }
+    .download-btn:hover {
+      background-color: #ff0000;
+    }
+    .title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .article {
+      font-size: 15px;
+      line-height: 1.5;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>Artículo 1</div>
+    <a href="index.html">← Volver al inicio</a>
+  </header>
+
+  <div class="container">
+    <div class="left">
+      <div class="title">Descripción del artículo</div>
+      <div class="article">
+        Aquí escribes tú como programador el contenido fijo del artículo.  
+        Por ejemplo, un análisis breve, explicación o lo que quieras mostrar.  
+        Este texto no es editable por el visitante.
+      </div>
+    </div>
+    <div class="right">
+      <a href="Rutas Críticas - CPM - Diagrama de Gantt.xslm" class="download-btn" download>Descargar Excel</a>
+      <a href="archivos/archivo1.pdf" class="download-btn" download>Descargar PDF</a>
+    </div>
+  </div>
+</body>
+</html>
